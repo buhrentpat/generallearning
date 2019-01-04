@@ -31,6 +31,7 @@
         <p><b>This text is bold</b> <code>This is computer code</code> <em> This text is emphasised</em> <i>This text is italic</i> <small>This text is small</small> <mark>This text is marked</mark> <strong> This text is strongly emphasisized</strong> This is <sub>subscript</sub> and <sup>superscript</sup> <ins>This text is inserted to the document</ins> <del>This text is deleted from the document</del></p>
         <br>
         <!-- This is completely taken from the tutorial, I'm too drunk to write it from scratch-->
+        <!-- also from here is playing with tables-->
         <table border="1" cellpadding="10" cellspacing="5">
             <thead>
                 <tr>
@@ -61,6 +62,7 @@
                 </tr>
             </tbody>
         </table>
+        <!-- now playing with different types of lists-->
         <ul>
             <li>Chocolate Cake</li>
             <li>Black Foredt Cake</li>
@@ -71,13 +73,43 @@
             <li>Bake in oven for an hour</li>
             <li>Allow to stand for ten minutes</li>
         </ol>
-        <!-- A deinition list is a list of items, with a description of each item. <dl> starts the list, <dt>is an item on the list, and <dd> is a description of the list-->
+        <!-- A definition list is a list of items, with a description of each item. <dl> starts the list, <dt>is an item on the list, and <dd> is a description of the list-->
         <dl>
             <dt>Bread</dt>
             <dd>A baked food made of floud.</dd>
             <dd>Rhi this method of making lists instead of dot points or numbers is so goddamn sexy</dd>
             <dt>Coffee</dt>
-            <dd>A drink made from roasted coffee beans.></dd>
+            <dd>A drink made from roasted coffee beans.</dd>
         </dl>
+        <!-- playing with forms-->
+        <form>
+            <fieldset>
+                <legend>Log In</legend>
+                <label>Username: <input type="text"></label>
+                <!--type="password" means the text is hidden-->
+                <label>Password: <input type="password"></label>
+                <!--creates a submit button, the value is what text appears in the button-->
+                <input type="submit" value="Submit">
+            </fieldset>
+            <!--creates a single choice option-->
+            <fieldset>
+                <input type="radio" name="sex" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="sex" id="female">
+                <label for="female">Female</label>
+            </fieldset>
+            <!-- creates a multiple choice option-->
+            <fieldset>
+                <input type="checkbox" name="coffee" id="milk">
+                <label for="milk">Milk</label>
+                <input type="checkbox" name="coffee" id="sugar">
+                <label for="sugar">Sugar</label>
+            </fieldset>
+            <!-- creates a box to opload documents to-->
+            <fieldset>
+                <label for="file-select">Upload:</label>
+                <input type="file" name="upload" id="file-select">
+            </fieldset>
+        </form>
     </body>
 </html>
