@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Brent Patching">
+        <!-- enable zooming on mobile devices-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML5 Page Layout</title>
+        <!-- in page CSS example
+        <style type="text/css">
+            body {background-color: yellowgreen;}
+            p {color:Black;}
+        </style> -->
+        <!-- external CSS example-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script>
+            window.onload = function(){
+                var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+                /* drawing a line (stroke) from coordinates 50,50 to 250,50 
+                context.moveTo(50,50);
+                context.lineTo(250,50);
+                context.stroke();*/
+                /* drawing an arc (stroke)
+                base code is: context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise);
+                context.arc(150,150,80,1.2*Math.PI, 1.8*Math.PI, false);
+                context.stroke(); */
+                // tbh I don't get it at all, I think I might just skip over how canvas works
+            };
+        </script>
+        <!-- <base href="https://www.tutorialrepublic.com/"> then directs all further links to start with www.tutorialrepublic.com/ regardless of the URL of the current page -->
+    </head>
+
+    <body>
+        <!-- <p><a href="html-tutorial/html-head.php">HTML Head</a></p> an in text example about how you can change the relative URL for any website-->
+        <div class="container">
+            <header>
+                <!-- example of in line CSS <h1 style="color:red; font-size:30px;">This is a heading</h1> but modified existing sheet ">-->
+                <h1>Hello World!</h1> 
+            </header>
+            <div class="wrapper clearfix">
+                <div class="sidebar">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="content">
+                    <section>
+                        <h2>This is the main section of the page</h2>
+                        <!--<canvas id="myCanvas" width="300" height="200"></canvas> -->
+                        <br>
+                        <br>
+                        <!-- again modified off tutorial which asked for <p style="color:green; font-size:18px;">This is a paragraph.</p> -->
+                        <!--further example of in line CSS <p style="color: green; font-size:18px;">-->
+                        <!-- example of javascript embedded in document
+                        <script type="text/javascript">
+                            document.write("Hello World!")
+                        </script>-->
+                        <!-- example of an external javascript-->
+                        <!-- tutorial had it as <script type="text/javascript" src="js/hello.js"></script> but the w3 validator came back and said the type attribute was unnessesary-->
+                        <script src="js/hello.js"></script>
+                            <p>This paragraph contains a <br> line break</p>
+                        <!-- previous versions of HTML had the img tag include width="500px" height="500px", using the w3 validator changed into a style attribute. On further reading you can use the old way, but not include px as part of the value-->
+                        <img src="balloons.jpg" alt="Hot Air Balloons" id="balloons" style="width:500px;height:500px;">
+                        <br>
+        <a href="balloons.jpg">Download Ballooons Image</a>
+        <p class="example">Here is some <em>emphasied</em> text.</p>
+        <abbr title="Hyper Text Markup Language">HTML"</abbr>
+        <p>multiple&nbsp;&nbsp;&nbsp;spaces.</p>
+        <p>multiple<br><br>line<br><br><br>breaks.</p>
+        <a href="https://www.tutorialrepublic.com/" target="_top">Tutorial Republic</a>
+        <a href="sky.jpg" target="_self"><img src="sky-thumb.jpg" alt="Sky Cloud"></a>
+        <a href="https://www.google.com/" target="_blank">Google</a>
+        <br>
+        <a href="#balloons"><img src="balloons-thumb.jpg" alt="Balloons"></a>
+        <p><b>This text is bold</b> <code>This is computer code</code> <em> This text is emphasised</em> <i>This text is italic</i> <small>This text is small</small> <mark>This text is marked</mark> <strong> This text is strongly emphasisized</strong> This is <sub>subscript</sub> and <sup>superscript</sup> <ins>This text is inserted to the document</ins> <del>This text is deleted from the document</del></p>
+        <br>
+        <!-- This is completely taken from the tutorial, I'm too drunk to write it from scratch-->
+        <!-- also from here is playing with tables, completely commenting out tables as the w3 validator came back with loads of problems, and I don't think it's an element I'll use often
+        <table border="1" cellpadding="10" cellspacing="5">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                    <th rowspan="4">Users Info</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>John Carter</td>
+                    <td>johncarter@mail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Peter Parker</td>
+                    <td>peterparker@mail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>John Rambo</td>
+                    <td>johnrambo@mail.com</td>
+                </tr>
+            </tbody>
+        </table> -->
+        <!-- now playing with different types of lists-->
+        <ul>
+            <li>Chocolate Cake</li>
+            <li>Black Foredt Cake</li>
+            <li>Pinapple Cake</li>
+        </ul>
+        <ol>
+            <li>Mix ingredients</li>
+            <li>Bake in oven for an hour</li>
+            <li>Allow to stand for ten minutes</li>
+        </ol>
+        <!-- A definition list is a list of items, with a description of each item. <dl> starts the list, <dt>is an item on the list, and <dd> is a description of the list-->
+        <dl>
+            <dt>Bread</dt>
+            <dd>A baked food made of floud.</dd>
+            <dd>Rhi this method of making lists instead of dot points or numbers is so goddamn sexy</dd>
+            <dt>Coffee</dt>
+            <dd>A drink made from roasted coffee beans.</dd>
+        </dl>
+        <!-- playing with forms-->
+        <form>
+            <fieldset>
+                <legend>Log In</legend>
+                <label>Username: <input type="text"></label>
+                <!--type="password" means the text is hidden-->
+                <br>
+                <br>
+                <label>Password: <input type="password"></label>
+            </fieldset>
+            <!--creates a single choice option-->
+            <fieldset>
+                <input type="radio" name="sex" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="sex" id="female">
+                <label for="female">Female</label>
+            </fieldset>
+            <!-- creates a multiple choice option-->
+            <fieldset>
+                <input type="checkbox" name="coffee" id="milk">
+                <label for="milk">Milk</label>
+                <input type="checkbox" name="coffee" id="sugar">
+                <label for="sugar">Sugar</label>
+            </fieldset>
+                    <fieldset>
+                        <!-- creates a box to upload documents to-->
+                        <label for="file-select">Upload:</label>
+                        <input type="file" name="upload" id="file-select">
+                        <br>
+                        <br>
+                        <!-- creates a multiple-line text input (for stories)-->
+                        <label for="address">Address:</label>
+                        <textarea rows="3" cols="30" name="address" id="address"></textarea>
+                        <br>
+                        <br>
+                        <!-- creates a dropdown menu-->
+                                <label for="city">City:</label>
+                                <select name="city" id="city">
+                                    <!-- if first option is included then it appears that now option has been selected by default.-->
+                                    <option value=na>&nbsp;</option>
+                                    <option value="sydney">Sydney</option>
+                                    <option value="melbourne">Melbourne</option>
+                                    <option value="hobart">Hobart</option>
+                                </select>
+                                <br>
+                                <br>
+                                <!-- allows users to select a colour, apparently not supported in IE or Safari-->
+                                <label>
+                                    Select Color: <input type="color" name="mycolor">
+                                </label>
+                                <br>
+                                <!-- allows users to select a date, not supported in IE and Firefox-->
+                                <label>
+                                    Select Date: <input type="date" name="mydate">
+                                </label>
+                                <br>
+                                <!-- allows users to select a date and time, not supported on IE, Firefox, Chrome or Opera-->
+                                <label>
+                                    Select Date & Time: <input type="datetime" name="mydatetime">
+                                </label>
+                                <br>
+                                <!-- allows users to sleect a local date and time without providing timezone information. Not supported on IE or Firefox-->
+                                <label>
+                                    Select Local Date & Time: <input type="datetime-local" name="mylocaldatetime">
+                                </label>
+                                <br>
+                                <label>
+                                    Email Address: <input type="email" name="myemail" required>
+                                </label>
+                                <br>
+                                <!--allows users to search input type with a cross on the side to clear the search term/s. Not supported by Firefox, IE9.-->
+                                <label>
+                                    Search Website: <input type="search" name="mysearch">
+                                </label>
+                                <br>
+                                <!-- allows users to put in a telephone number. Validation isn't there yet, but will change keyboard type for iphone and android devices-->
+                                <label>
+                                    Telephone Number: <input type="tel" name="mytelephone" required>
+                                </label>
+                            </fieldset>
+                            <!--creates a submit button, the value is what text appears in the button-->
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </form>
+                        <!-- I'll mess around with embedding audio in this section-->
+                        <!-- audio using the HTML5 audio element with one source-->
+                        <br>
+                        <h3>This section deals with Audio</h3>
+                        <p>HTML5 with one source</p>
+                        <audio controls="controls" src="audio/wind.mp3">
+                            Your browser does not support the HTML5 Audio Element
+                        </audio>
+                        <br>
+                        <p>HTML5 with multiple sources</p>
+                        <!--ogg works for Firefox, Opera and Chrome where as MP3 works for IE and Safari-->
+                        <audio controls="controls">
+                            <source src="audio/wind.mp3" type="audio/mpeg">
+                            <source src="audio/wind.ogg" type="audio/ogg">
+                            Your browser does not support the HTML5 Audio Element
+                        </audio>
+                        <p>Linking to an audio file</p>
+                        <a href="audio/wind.mp3">Wind.mp3</a>
+                        <p>Using the object Element</p>
+                        <!-- apparently this method isn't well supported-->
+                        <object data="audio/wind.mp3" width="200" height="50"></object>
+                        <p>Using the embed Element</p>
+                        <!-- apparently very well supported and a defined standard, but has difficulties with audio-->
+                        <h3>This section deals with Video</h3>
+                        <p>HTML5 with one source</p>
+                        <video controls="controls" src="video/shuttle.mp4">
+                            Your browser does not support the HTML5 Video Element
+                        </video>
+                        <p>HTML5 with multiple sources</p>
+                        <!--ogv works for Firefox, Opera and Chrome where as MP4 works for IE and Safari-->
+                        <video controls="controls">
+                            <source src="video/shuttle.mp4" type="video/mp4">
+                            <source src="video/shuttle.ogv" type="video/ogg">
+                            Your browser does not support the HTML5 Video Element
+                        </video>
+                        <!-- tutorial used Flash video examples for object element and embed element, so no point practicing because flash sucks/outdated-->
+                    </section>
+                </div>
+            </div>
+            <footer>
+                <p>copyright &copy; tutoriarepublic.com but also Brent? Who knows</p>
+            </footer>
+        </div>
+    </body>
+</html>

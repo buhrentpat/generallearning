@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>A simple HTML document</title>
+        <!-- in page CSS example
         <style type="text/css">
             body {background-color: yellowgreen;}
             p {color:Black;}
-        </style>
+        </style> -->
+        <!-- external CSS example-->
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
     <body>
-        <!-- combined tutorial where this should have been <h1 style="color:red; font-size:30px;">This is a heading</h1> but modified existing sheet -->
-        <p style="color:red; font-size:30px;">Hello World!</p>
-        <!-- again modified off tutorial which asked for <p style="color:green; font-size:18px;">This is a paragraph.</p> -->
-        <p style="color: green; font-size:18px;">This paragraph contains a <br> line break</p>
-        <img src="balloons.jpg" alt="Hot Air Balloons" id="balloons" width=500px, height=auto>
-        <br>
+        <div class="container">
+            <div class="header">
+                <!-- example of in line CSS <h1 style="color:red; font-size:30px;">This is a heading</h1> but modified existing sheet ">-->
+                <h1>Hello World!</h1> 
+            </div>
+            <div class="wrapper">
+                <div class="sidebar">
+                    <div class="nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="section">
+                        <!-- again modified off tutorial which asked for <p style="color:green; font-size:18px;">This is a paragraph.</p> -->
+                        <!--furhter example of in line CSS <p style="color: green; font-size:18px;">-->
+                        <p>This paragraph contains a <br> line break</p>
+                        <img src="balloons.jpg" alt="Hot Air Balloons" id="balloons" width=500px, height=auto>
+                        <br>
         <a href="balloons.jpg">Download Ballooons Image</a>
         <p class="example">Here is some <em>emphasied</em> text.</p>
         <abbr title="Hyper Text Markup Language">HTML</abbr>
@@ -87,9 +104,9 @@
                 <legend>Log In</legend>
                 <label>Username: <input type="text"></label>
                 <!--type="password" means the text is hidden-->
+                <br>
+                <br>
                 <label>Password: <input type="password"></label>
-                <!--creates a submit button, the value is what text appears in the button-->
-                <input type="submit" value="Submit">
             </fieldset>
             <!--creates a single choice option-->
             <fieldset>
@@ -105,11 +122,38 @@
                 <input type="checkbox" name="coffee" id="sugar">
                 <label for="sugar">Sugar</label>
             </fieldset>
-            <!-- creates a box to opload documents to-->
             <fieldset>
+                <!-- creates a box to upload documents to-->
                 <label for="file-select">Upload:</label>
                 <input type="file" name="upload" id="file-select">
-            </fieldset>
-        </form>
+                <br>
+                <br>
+                <!-- creates a multiple-line text input (for stories)-->
+                <label for="address">Address:</label>
+                <textarea rows="3" cols="30" name="address" id="address"></textarea>
+                <br>
+                <br>
+                        <!-- creates a dropdown menu-->
+                        <label for="city">City:</label>
+                        <select name="city" id="city">
+                                <!-- if first option is included then it appears that now option has been selected by default.-->
+                                <option value=na>&nbsp;</option>
+                                <option value="sydney">Sydney</option>
+                                <option value="melbourne">Melbourne</option>
+                                <option value="hobart">Hobart</option>
+                            </select>
+                            </fieldset>
+                            <!--creates a submit button, the value is what text appears in the button-->
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </form>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer">
+                <p>copyright &copy; tutoriarepublic.com but also Brent? Who knows</p>
+            </div>
+        </div>
     </body>
 </html>

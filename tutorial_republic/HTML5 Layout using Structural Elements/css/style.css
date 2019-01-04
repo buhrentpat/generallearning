@@ -1,0 +1,82 @@
+body{
+  /* sets the default font for the website, and resets all margins to 0 as some browsers have different defaults */
+  font: 12px verdana, sans-serif;
+  margin: 0px;
+}
+header{
+  /* sets top and bottom padding for the header tag, and gives it a background color */
+  padding: 10px;
+  background-color: #679BB7;
+}
+header h1{
+  /* sets the font size and margin for any h1 tags used in the header tag  */
+  font-size: 18px;
+  margin: 10px 0;
+}
+.container{
+  /* creates a container which fits the header, wrapper and footer  */
+  width: 100%;
+  background-color: #f0f0f0;
+}
+.sidebar{
+  /* sits within the wrapper on the left hand side of the page, contains the nav  */
+  float: left;
+  width: 20%;
+  min-height: 170px;
+  background-color: #bbd2df;
+}
+.sidebar nav{
+  /* pads any nav tag that sits within a 'sidebar' class  */
+  padding: 10px;
+}
+nav ul{
+  /* strips the styling of lists for use as a nav  */
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+nav ul li{
+  /* margin of 5 pixels at the bottom of each nav list item  */
+  margin-bottom: 5px;
+}
+nav ul li a{
+  /* changes the default colours of the nav links  */
+  color: #3d677e;
+}
+nav ul li a:hover{
+  /* strips styling for nav links when the mouse is over it  */
+  text-decoration: none;
+}
+.content{
+  /* floats it next to the 'sidebar' class, which both sit within the 'wrapper' class */
+  float: left;
+  width: 80%;
+  min-height: 170px;
+}
+.content section {
+  /* creates space between the section tag which acts as the body of the content and adjoining 'sidebar' class and header tag  */
+  padding: 10px;
+}
+section h2{
+  /* sets the font-size for any h2 tags used in the section tag, and strips the margins  */
+  font-size: 16px;
+  margin: 0px;
+}
+.clearfix:after{
+  /* is used in combination with the 'wrapper' class to the make sure whatever comes after the 'wrapper' class sits directly undeath the other elements  */
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+footer{
+  /* sets the background-color of the footer tag  */
+  background-color: #679bb7;
+  padding: 10px 0;
+}
+footer p{
+  /* sets the text alignment and margins for all p tags used in the footer tag  */
+  text-align: center;
+  margin: 5px;
+}
